@@ -1,0 +1,39 @@
+{
+  "input_guardrails": [
+    "SemanticSmooth",
+    "DetectPII",
+    "PplDetector",
+    "CustomMask"
+  ],
+  "output_guardrails": [
+    "CustomMask",
+    "DetectPII",
+    "LlmToxic"
+  ],
+  "inner_guardrails": [
+    "SafeDecoding",
+    "RAIN"
+  ],
+  "ppl_check_length": 100,
+  "ppl_loop": 3,
+  "ppl_delect_length": 7,
+  "ppl_min_text_rate": 0.5,
+  "ppl_reserve_threshold": 5,
+  "semantic_pert_type": "summarize-cn",
+  "semantic_on_fail": "exception",
+  "pii_entities_input": [
+    "EMAIL_ADDRESS",
+    "PHONE_NUMBER"
+  ],
+  "DetectPII_on_fail_input": "exception",
+  "mask_list_input": [],
+  "llm_toxic_threshold": 0.5,
+  "llm_toxic_validation_method": "sentence",
+  "llm_toxic_on_fail": "exception",
+  "output_mask_list": [],
+  "pii_entities_output": [
+    "EMAIL_ADDRESS",
+    "PHONE_NUMBER"
+  ],
+  "DetectPII_on_fail_output": "exception"
+}
