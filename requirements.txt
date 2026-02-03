@@ -1,0 +1,10 @@
+django
+django-cors-headers
+djangorestframework
+guardrails-ai
+gunicorn
+torch
+nltk
+presidio_analyzer
+presidio_anonymizer
+
