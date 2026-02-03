@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>[STAIR 实验室] 大模型安全护栏</h1>
+<h1>X-Guardrail 大模型安全护栏</h1>
 
 <hr>
 
@@ -12,16 +12,18 @@
 
 </div>
 
-# 什么是大模型安全护栏?
+# 什么是X-Guardrail大模型安全护栏?
 
-大模型安全护栏是一个基于Django的python防御框架，它可以帮助开源大模型在生产环境中快速、低成本、便捷的部署可信AI应用。他有具备以下几点优势：
+X-Guardrail是一个基于Django的python防御框架，它可以帮助开源大模型在生产环境中快速、低成本、便捷的部署可信AI应用。具备如下优势：
+1.开创 “激活-探测” 越狱检测技术，无需微调，超越现有安全内容检测方法。
+2.研发1.7B轻量化防护模型，在五类有害文本识别上的平均准确率高达91.03%。
+3.首创多层级协同防御架构，实现全链路闭环安全治理；实现动态编排与即插即用，极大提升框架适配性。
+4.引入响应重构机制，将被动拦截升级为语义级主动修复。
+5.系统防御卓越：ASR<1%，拦截率>95%；端侧部署可行：平均响应延迟≤300ms，全组件运行算力占用≤30%，内存占用≤8GB，适配端侧资源受限场景。
 
-1. 大模型安全护栏分别提供了输入护栏、输出护栏以及内生护栏，支持全方位、全生命周期保护开源大模型。
-2. 基于组件化的设计，大模型安全护栏可以模块化定制个性化防御护栏。
-3. 全部组件与框架均来自开源框架。
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/Buhaoran0307/README-picture/refs/heads/main/LLM_defense_framework/framework.png" width="1500px">
+    <img src="X-Guardrail_Framework.png" width="1500px">
 </div>
 
 # 配置要求
@@ -257,30 +259,3 @@ curl -X POST \
 ## 我想了解更多框架细节，我应该在哪里查看？
 
 我们制定了用户手册，你可以在[这里](https://icnodknns82a.feishu.cn/wiki/Wyxdw0kZqid6GJkiwFfcR4pJnWc?from=from_copylink)看到具体细节。
-
-## 文件架构是什么?
-
-```bash
-├─Atuo_api_for_LLM
-├─Client
-├─Detector_API
-├─Inner_guard_API
-└─LLMGuardrail
-    ├─inner_guard
-    ├─input_guard
-    ├─LLMGuardrail
-    ├─output_guard
-    └─user_management
-```
-
-1. Atuo_api_for_LLM：此文件夹包含快速部署模型对话回答api，其中就包括用于输出护栏的大模型评估组件所需要的[MD-Judge-v0.1]模型。([OpenSafetyLab/MD-Judge-v0.1](https://huggingface.co/OpenSafetyLab/MD-Judge-v0.1))
-2. Client：此文件夹包含内生护栏客户端的对外API，它主要用于实现面向用户的api接口和与服务器的内生护栏通信。
-3. Detector_API：此文件夹包含护栏所采用各项评估组件需要的模型api，它主要用于降低调用时部署模型所需要的额外开销。
-4. Inner_guard_API：此文件夹包含内生护栏服务端所需要的第三方安全模型。如在本项目中，它主要用于实现safedecoding防御机制的安全token查询、模型封装、模型推理等功能。
-5. LLMGuardrail：此文件夹包含整个django框架的主要代码，其中包含了输入护栏、输出护栏、内生护栏、用户管理等模块。
-
-# Contributing
-
-我们欢迎为 大模型安全护栏 做出贡献！
-
-请随意提出问题，或者如果您想添加到项目中，请联系我们！
