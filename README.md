@@ -14,7 +14,9 @@
 1. 大模型安全护栏分别提供了输入护栏、输出护栏，支持全方位保护开源大模型。
 2. 基于组件化的设计，大模型安全护栏可以模块化定制个性化防御护栏。
 
-<img width="322" height="226" alt="image" src="https://github.com/user-attachments/assets/9804c872-7934-4bf9-99dd-33dbf29bcf56" />
+<div align="center">
+    <img width="500" alt="image" src="https://github.com/user-attachments/assets/9804c872-7934-4bf9-99dd-33dbf29bcf56" />
+</div>
 
 # 配置要求
 
