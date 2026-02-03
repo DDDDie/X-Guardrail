@@ -15,7 +15,7 @@
 2. 基于组件化的设计，大模型安全护栏可以模块化定制个性化防御护栏。
 
 <div align="center">
-    <img width="500" alt="image" src="https://github.com/user-attachments/assets/9804c872-7934-4bf9-99dd-33dbf29bcf56" />
+    <img width="800" alt="image"  src="X-Guardrail_Framework.png" />
 </div>
 
 # 配置要求
