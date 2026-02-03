@@ -1,0 +1,9 @@
+{
+    "llm-Phi-3": {
+        "model_path": "/home/buhaoran2023/LLM_Models/Microsoft/Phi-3-mini-4k-instruct/",
+        "model_type": "Phi-3",
+        "load_in_4bit": false,
+        "device_map": "auto",
+        "torch_dtype": "auto"
+    }
+}
